@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>irrigation form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="irrigationForm">
+        <h1>Irrigation Planning Form</h1>
+        
+
+    <label for="plant type">plant type (1 = low 3=high)
+        <select id="plantType" name="plant type">
+          <option value="">(select one)</option>
+
+          <option class="tree" value="0.3">trees</option>
+
+          <option class ="roses" value="0.5">roses 2</option>
+          <option class ="roses" value="0.65">roses 3</option>
+
+          <option class ="grass" value="0.3">grass 1</option>
+          <option class ="grass" value="0.45">grass 2</option>
+          <option class ="grass" value="0.6">grass 3</option>
+
+          <option class ="bush" value="0.25">bush 1</option>
+          <option class ="bush" value="0.3">bush 2</option>
+          <option class ="bush" value="0.45">bush 3</option>
+          
+          <option class ="small bush" value="0.5">small bush </option>
+          
+          <option class ="water-wise" value="0.01">water-wise plants 1</option>
+          <option class ="water-wise" value="0.1">water-wise plants 2</option>
+          <option class ="water-wise" value="0.2">water-wise plants 3</option>
+        </select>
+      </label>
+
+      <!-- <label for="maintenance level">maintenance level
+        <select id="maintenance" name="maintenance">
+          <option value="">(select one)</option>
+          <option value="">high</option>
+          <option value="">medium</option>
+          <option value="">low</option> 
+        </select>
+      </label> -->
+
+      <label for="loction factor"> loction
+        <select id="loction" name="loction">
+          <option value="">(select one)</option>
+          <option value="6.47">north</option>
+          <option value="7.5">golan hights & ahola</option>
+          <option value="7.96">emek bit shean</option>
+          <option value="6.55">center</option>
+          <option value="6.91">south</option>
+          <option value="8.29">negev</option>
+          <option value="11.1">eilat & dead sea</option>
+        </select>
+      </label>
+
+      <label for="interval">wanted interval (by days)
+        <input type="number" id="interval" class="interval" name="interval" min="1" max="">
+      </label>
+      <label for="area">area size (meter)
+        <input id="areaSize" type="number" class="area" name="area" min="0.1" max="99999">
+      </label>
+      
+      <label for="drip type">drip type</label>
+      <select id="dripType" name="dripType" class="drip">
+        <option value="0.3">0.3</option>
+        <option value="0.5">0.5</option>
+        <option value="1.0">1.0</option>
+      </select>
+
+      <label for="drip flow">drip flow</label>
+      <select id="dripFlow" name="dripFlow" class="drip">
+      <option value="1.6">1.6</option>
+      <option value="2.3">2.3</option>
+      <option value="3.5">3.5</option>
+    </select>
+    
+      <button type="button" onclick="calculateResult(), calculatDrippers(), calculatFlow(), calculatTime()">Submit</button>
+    </form>
+
+    <div id="resultContainer">
+      <h2>Result:</h2>
+      <p id="resultValue">-</p>
+    </div>
+    <div id="amountofDrippers">
+      <h2>drippres count:</h2>
+      <p id="resultDrippers">-</p>
+    </div>
+  </div>
+  <div id="drippresFlow">
+      <h2>drippres Flow:</h2>
+      <p id="drippresFlow">-</p>
+    </div>
+    <div id="claculateTime">
+      <h2>time:</h2>
+      <p id="claculateTime">-</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  </body>

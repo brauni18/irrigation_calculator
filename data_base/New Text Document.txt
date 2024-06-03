@@ -1,0 +1,13 @@
+1.  goal
+ the app should  suggest multiple irrigation lines  on the  cad\revit\pdf drawing
+the target users are landscape studios and freelancers
+
+2. requirements
+the program needs to be able to read one or more of the following - cad files / revit files / pdf 
+the program need to be able to generate one or more of the following - cad file / revit file / pdf file
+
+3. ux ui 
+should be as simple as possible with minimum of buttons  
+but should have a few scales that can manipulate the drawing like :
+number of irrigation lines required 
+number of symbols appear on the drawing and so on     
