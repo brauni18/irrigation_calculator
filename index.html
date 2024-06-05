@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -36,14 +36,14 @@
         </select>
       </label>
 
-      <!-- <label for="maintenance level">maintenance level
+      <label for="maintenance level">maintenance level
         <select id="maintenance" name="maintenance">
           <option value="">(select one)</option>
           <option value="">high</option>
           <option value="">medium</option>
           <option value="">low</option> 
         </select>
-      </label> -->
+      </label> 
 
       <label for="loction factor"> loction
         <select id="loction" name="loction">
@@ -81,7 +81,7 @@
     
       <button type="button" onclick="calculateResult(), calculatDrippers(), calculatFlow(), calculatTime()">Submit</button>
     </form>
-
+    <form>
     <div id="resultContainer">
       <h2>Result:</h2>
       <p id="resultValue">-</p>
@@ -90,8 +90,7 @@
       <h2>drippres count:</h2>
       <p id="resultDrippers">-</p>
     </div>
-  </div>
-  <div id="drippresFlow">
+    <div id="drippresFlow">
       <h2>drippres Flow:</h2>
       <p id="drippresFlow">-</p>
     </div>
@@ -100,6 +99,103 @@
       <p id="claculateTime">-</p>
     </div>
   </div>
-
+</form>
   <script src="script.js"></script>
   </body>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Irrigation Planning Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="irrigationForm">
+            <h1>Irrigation Planning Form</h1>
+
+            <label for="plantType">Plant Type (1 = low, 3 = high)
+                <select id="plantType" name="plantType">
+                    <option value="">(select one)</option>
+                    <option class="tree" value="0.3">Trees</option>
+                    <option class="roses" value="0.5">Roses 2</option>
+                    <option class="roses" value="0.65">Roses 3</option>
+                    <option class="grass" value="0.3">Grass 1</option>
+                    <option class="grass" value="0.45">Grass 2</option>
+                    <option class="grass" value="0.6">Grass 3</option>
+                    <option class="bush" value="0.25">Bush 1</option>
+                    <option class="bush" value="0.3">Bush 2</option>
+                    <option class="bush" value="0.45">Bush 3</option>
+                    <option class="small bush" value="0.5">Small Bush</option>
+                    <option class="water-wise" value="0.01">Water-wise Plants 1</option>
+                    <option class="water-wise" value="0.1">Water-wise Plants 2</option>
+                    <option class="water-wise" value="0.2">Water-wise Plants 3</option>
+                </select>
+            </label>
+
+            <label for="location">Location
+                <select id="location" name="location">
+                    <option value="">(select one)</option>
+                    <option value="6.47">North</option>
+                    <option value="7.5">Golan Heights & Ahola</option>
+                    <option value="7.96">Emek Bit Shean</option>
+                    <option value="6.55">Center</option>
+                    <option value="6.91">South</option>
+                    <option value="8.29">Negev</option>
+                    <option value="11.1">Eilat & Dead Sea</option>
+                </select>
+            </label>
+
+            <label for="interval">Wanted Interval (by days)
+                <input type="number" id="interval" class="interval" name="interval" min="1">
+            </label>
+
+            <label for="areaSize">Area Size (meter)
+                <input id="areaSize" type="number" class="area" name="areaSize" min="0.1" max="99999">
+            </label>
+
+            <label for="dripType">Drip Type
+                <select id="dripType" name="dripType" class="drip">
+                    <option value="0.3">0.3</option>
+                    <option value="0.5">0.5</option>
+                    <option value="1.0">1.0</option>
+                </select>
+            </label>
+
+            <label for="dripFlow">Drip Flow
+                <select id="dripFlow" name="dripFlow" class="drip">
+                    <option value="1.6">1.6</option>
+                    <option value="2.3">2.3</option>
+                    <option value="3.5">3.5</option>
+                </select>
+            </label>
+
+            <button type="button" onclick="calculateResult()">Submit</button>
+        </form>
+        <div id="resultContainer">
+            <div class="result-item">
+                <strong>total flow:</strong>
+                <span id="totalFlow">-</span>
+            </div>
+            <div class="result-item">
+                <strong>Time:</strong>
+                <span id="calculateTimeResult">-</span>
+            </div>
+            <div class="result-item">
+                <strong>Drippers Count:</strong>
+                <span id="resultDrippers">-</span>
+            </div>
+            <div class="result-item">
+                <strong>Drippers Flow:</strong>
+                <span id="resultDrippersFlow">-</span>
+            </div>
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+  
+  
